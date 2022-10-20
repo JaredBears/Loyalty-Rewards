@@ -15,7 +15,7 @@ import com.jaredbears.loyalty.service.Service;
 public class DefaultController implements Controller {
   @Override
   public void incomingTransaction(int points, String payerName, String date) {
-    SimpleDateFormat formatter = new SimpleDateFormat("MM-dd-yyyy HH:mm:ss");
+    SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
     Payers payer = Payers.valueOf(payerName.toUpperCase());
     Service service = new Service();
     try {
@@ -28,7 +28,7 @@ public class DefaultController implements Controller {
 
   @Override
   public void outGoingTransaction(int points, String date) {
-    SimpleDateFormat formatter = new SimpleDateFormat("MM-dd-yyyy HH:mm:ss");
+    SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
     Service service = new Service();
     try {
       Date time = formatter.parse(date);
