@@ -10,6 +10,8 @@ There are currently two methods of interacting with the program: Through the Swa
 To access the Swagger UI, after running the program, open your browser and proceed to [http://localhost:8080/swagger-ui/index.html](http://localhost:8080/swagger-ui/index.html).
 
 ### Reward Accrual
+*Note*: At this time, the only valid payers are DANNON, UNILEVER, MILLER_COORS
+
 To accrue new reward points, fill out the form labelled "POST loyalty/earned" in Swagger, or submit the information through URL parameters as follows:
 ```
 http://localhost:8080/loyalty/earned?points=100&payerName=DANNON&date=2022-01-02%2001%3A02%3A03
