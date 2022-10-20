@@ -15,7 +15,7 @@ public class Incoming extends Transaction{
     this.setPayer(payer);
     this.setPoints(points);
     this.setDate(date);
-    this.setPointsRemaining(points);
+    this.setPointsRemaining(Math.max(points,0));
   }
 
 }
